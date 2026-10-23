@@ -10,7 +10,7 @@
 <body><div class="app">
   <header class="top"><div class="brand">♠ Poker Night Shared</div><div class="connection"><i class="dot" id="dot"></i><span id="conn">Not connected</span></div></header>
   <section class="hero"><div class="eyebrow">One table · everyone in sync</div><h1>Game night,<br>in one place.</h1><p class="lede">Share the room code so your crew can follow the blinds, prize pool and settle-up from their own phones.</p></section>
-  <section id="setup" class="card setup"><h2>Connect your table</h2><p class="note">Add your Supabase project details once on this device, then create a room or join with a code. The public anon key is designed for browser use; never paste a service-role key here.</p>
+  <section id="setup" class="card setup"><h2>Connect your table</h2><p class="note">This app is pre-configured for the Cypress Poker Supabase project. Choose Connect, then create a room or join with a code. The public anon key is designed for browser use; never paste a service-role key here.</p>
     <div class="field"><label for="url">Supabase project URL</label><input id="url" type="url" placeholder="https://your-project.supabase.co" autocomplete="url"></div>
     <div class="field"><label for="key">Supabase anon / publishable key</label><input id="key" type="password" placeholder="sb_publishable_…" autocomplete="off"></div>
     <div class="row"><button class="btn primary" id="connect">Connect</button><button class="btn ghost" id="forget">Forget on this device</button></div><p id="setupError" class="error" role="status"></p><p class="small">Supabase Auth must allow anonymous sign-ins, and the database setup script must be applied. See <a href="SETUP.md" style="color:var(--lime)">SETUP.md</a>.</p>
@@ -68,7 +68,7 @@ $('connect').onclick=connect;$('forget').onclick=()=>{localStorage.removeItem(cf
 document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>setTab(b.dataset.view));$('toggleTimer').onclick=timerToggle;$('prevLevel').onclick=()=>setLevel(-1);$('nextLevel').onclick=()=>setLevel(1);$('stack').onchange=()=>{room.state.stack=Math.max(100,Number($('stack').value)||100);persist();render()};$('places').onchange=()=>{room.state.places=Number($('places').value);persist();render()};$('addPlayer').onclick=()=>{room.state.players.push({name:'',buys:1,cash:''});persist();render()};
 document.addEventListener('input',e=>{const el=e.target;if(!room||el.dataset.player===undefined)return;const p=room.state.players[Number(el.dataset.player)];if(!p)return;if(el.dataset.field==='name')p.name=el.value;if(el.dataset.field==='cash')p.cash=el.value;persist();if(el.dataset.field==='cash'){renderSettle();$('pool').textContent=money(pool())}});
 document.addEventListener('click',e=>{const el=e.target.closest('[data-player][data-field]');if(!room||!el)return;const p=room.state.players[Number(el.dataset.player)];if(!p)return;if(el.dataset.field==='more')p.buys=Math.min(20,(Number(p.buys)||0)+1);if(el.dataset.field==='less')p.buys=Math.max(0,(Number(p.buys)||0)-1);persist();render()});
-try{const c=readCfg();if(c.url&&c.key){$('url').value=c.url;$('key').value=c.key}}catch{}
+try{const c=readCfg();$('url').value=c.url||'https://qyplqfjmcgzfvtjwavjf.supabase.co';$('key').value=c.key||'sb_publishable_GzXm5feefHsp3Jq3xDt1-w_HQ6qSSHA';if(c.url&&c.key){$('url').value=c.url;$('key').value=c.key}}catch{}
 })();
 </script>
 </body></html>
