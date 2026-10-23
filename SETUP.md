@@ -10,7 +10,7 @@ The app is **not connected to a live backend until you configure Supabase**. It 
 2. In the Supabase dashboard, enable **Anonymous Sign-Ins** under Authentication sign-in providers.
 3. Open the SQL Editor and run the complete contents of `setup.sql`.
 4. Publish `index.html` on a static HTTPS host (or serve this folder from a local web server for a private trial). The Supabase JavaScript client and fonts load from external CDNs, so the browser needs an internet connection.
-5. Open the app, enter the project's URL and its **anon/publishable key**, and choose **Connect**. The app saves these project connection details on that device.
+5. Open the published app and choose **Connect**. The Cypress Poker project URL and **publishable key** are pre-filled; the app saves connection details on that device.
 6. Create a room, then share the displayed eight-character code with players. Each person opens the same hosted app, connects with the same project details and joins with the code.
 
 Never enter a Supabase `service_role` key in the browser. The app only needs the public anon/publishable key; database row-level security and anonymous user membership protect room data.
