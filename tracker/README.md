@@ -1,6 +1,6 @@
-# Felt Poker Night Tracker
+# Cypress Poker Night Tracker
 
-Felt is a dependency-free static web app. It can be hosted on any static HTTPS host; it does not need a server-side runtime, database, or user account to play. A hosting provider may require an account to publish the site. The app uses browser `localStorage` for game records, so history stays in the same browser on the same device and is not shared between players.
+Cypress Poker is a dependency-free static web app. It can be hosted on any static HTTPS host; it does not need a server-side runtime, database, or user account to play. A hosting provider may require an account to publish the site. The app uses browser `localStorage` for game records, so history stays in the same browser on the same device and is not shared between players.
 
 ## Host it
 
