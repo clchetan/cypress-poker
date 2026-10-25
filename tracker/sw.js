@@ -1,4 +1,4 @@
-const CACHE_NAME = 'felt-poker-v1';
+const CACHE_NAME = 'cypress-poker-v2';
 const APP_FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', event => {
