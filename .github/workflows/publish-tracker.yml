@@ -1,4 +1,4 @@
-name: Publish Felt tracker to GitHub Pages
+name: Publish Cypress Poker tracker to GitHub Pages
 
 on:
   push:
