@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "Felt — Poker Night Tracker",
-  "short_name": "Felt",
+  "name": "Cypress Poker — Poker Night Tracker",
+  "short_name": "Cypress Poker",
   "description": "Track poker buy-ins, cash-outs, and settlements.",
   "start_url": "./",
   "scope": "./",
