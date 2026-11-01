@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cypress-poker-v5';
+const CACHE_NAME = 'cypress-poker-v6';
 const APP_FILES = ['./', './index.html', './stats.html', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', event => {
