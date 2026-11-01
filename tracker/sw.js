@@ -1,5 +1,5 @@
-const CACHE_NAME = 'cypress-poker-v3';
-const APP_FILES = ['./', './index.html', './manifest.webmanifest', './icon.svg'];
+const CACHE_NAME = 'cypress-poker-v4';
+const APP_FILES = ['./', './index.html', './stats.html', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(APP_FILES)));
